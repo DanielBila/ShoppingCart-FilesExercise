@@ -52,9 +52,9 @@ namespace ShoppingCart
             {
                 Console.WriteLine(m.Message);
             }           
-            catch (UnauthorizedAccessException)
+            catch (UnauthorizedAccessException m)
             {
-                Console.WriteLine("Se mata");
+                Console.WriteLine(m.Message);
             }
 
         }
