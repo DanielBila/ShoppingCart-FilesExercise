@@ -12,10 +12,11 @@ namespace ShoppingCart.Services
     internal class CsvDirectoryService
     {
         public string Path { get; set; }
-        public List<Shopping> Products { get; set; } = new List<Shopping>();
+        public List<Shopping> Products = new List<Shopping>();
 
         public CsvDirectoryService(string path)
         {
+            
             Path = path + @"\out";
             // Check if the directory exists, if not create it
             if (Directory.Exists(Path))

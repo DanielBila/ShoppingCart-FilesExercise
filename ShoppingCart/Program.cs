@@ -12,7 +12,7 @@ namespace ShoppingCart
             {
                 Console.WriteLine("enter the location of the csv file:");
                 string path = Console.ReadLine().TrimEnd('\\');
-                CsvDirectoryService Service = new CsvDirectoryService(path);
+                CsvDirectoryService service = new CsvDirectoryService(path);
                 Console.WriteLine("enter the quantity of the product to be cataloged: ");
                 int cataloged = int.Parse(Console.ReadLine());
                 for (int i = 0; i < cataloged; i++)
@@ -23,11 +23,11 @@ namespace ShoppingCart
                     double price = double.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
                     Console.WriteLine("enter the quantity of the product: ");
                     int quantity = int.Parse(Console.ReadLine(),CultureInfo.InvariantCulture);
-                    Service.AddProduct(product, price, quantity);
+                    service.AddProduct(product, price, quantity);
                 }
                 Console.Clear();
                 Console.WriteLine("Quantidade Nome Preço");
-                foreach (Shopping item in Service.Products)
+                foreach (Shopping item in service.Products)
                 {
                     Console.WriteLine(item);
                 }
